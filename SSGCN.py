@@ -21,7 +21,7 @@ c="PC3"
 file2 = "./eight_cell_line/ppi_expression.npy"
 file="./eight_cell_line/"+c+"test_cp_id_cp_information.pickle"
 
-## load in data
+
 def norm_laplacian(adj):
     
     D_inv = np.divide(1., np.sqrt(D), out=np.zeros_like(D), where=D!=0.)
@@ -29,7 +29,7 @@ def norm_laplacian(adj):
     
     D_inv_diag=np.zeros_like(adj)
     np.fill_diagonal(D_inv_diag,D_inv)
-#    D_inv_diag = sparse.diags(D_inv)
+
     adj = D_inv_diag.dot(adj).dot(D_inv_diag)
     return adj       
 partition = np.load(file2)#adj
@@ -60,7 +60,7 @@ n_hidden_3 =4
 n_classes = 2
 n_features = 978
 n_embbding=100
-## initiate training logs
+
 loss_rec = np.zeros([training_epochs, 1])
 training_eval = np.zeros([training_epochs, 2])
 
@@ -68,19 +68,9 @@ training_eval = np.zeros([training_epochs, 2])
 def multilayer_perceptron(x, weights, biases, droprate):
     W=tf.diag(weights['h1'])
     Z=tf.matmul(tf.matmul(U,W),U_T)
-    
-    
-    
     layer_1=tf.matmul(x,Z,transpose_b=True)
-    
-    
-#    layer_1 = tf.add(tf.matmul(x, tf.multiply(weights['h1'], partition)), biases['b1'])
-    layer_1 = tf.nn.relu(layer_1)
-#    if max_pooling:
-#        layer_1 = max_pool(layer_1)
-    
-    layer_1 = tf.nn.dropout(layer_1, rate=droprate)
-
+    layer_1 = tf.nn.relu(layer_1) 
+    layer_1 = tf.nn.dropout(layer_1, rate=droprate
     layer_2 = tf.add(tf.matmul(layer_1, weights['h2']), biases['b2'])
     layer_2 = tf.nn.relu(layer_2)
    
@@ -125,7 +115,7 @@ biases_out = {
     
 }
 
-# Construct model
+
 
 pred1_ = multilayer_perceptron(x1, weights, biases,drop_placeholder )
 pred2_=multilayer_perceptron(x2,weights,biases,drop_placeholder)
@@ -145,13 +135,7 @@ layer_1=tf.add(tf.matmul(out_feature,weights_out['h1']),biases_out['b1'])
 layer_1=tf.nn.relu(layer_1)
 pred=tf.add(tf.matmul(layer_1,weights_out['h2']),biases_out['b2'])
 
-# Define loss and optimizer
-cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=pred, labels=y))
-if L2_weight_decay :
-    reg= tf.contrib.layers.apply_regularization(tf.contrib.layers.l2_regularizer(L2_weight_decay),tf.trainable_variables())
-   
-    cost = tf.add(cost,reg)
-optimizer = tf.train.AdamOptimizer(learning_rate).minimize(cost)
+
 
 
 
