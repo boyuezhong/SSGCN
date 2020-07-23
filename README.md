@@ -9,11 +9,12 @@ The SSGCN model was implemented in the TensorFlow framework (version TensorFlow-
 ## Hardware Requirements
 The SSGCN requires a computer with a  GPU.
 # Installation Guide:
+## Instructions
+conda install tensorflow-gpu=1.14
 git clone https://github.com/boyuezhong/SSGCN.git.
+## Typical install time 
+Installation takes 3 minutes.
 
-cd SSGCN.
-
-This package does not need to be installed, it can be used directly.
 # Demo
 cd SSGCN
 
