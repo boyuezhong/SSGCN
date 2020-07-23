@@ -27,7 +27,8 @@ python SSGCN.py
 
 # Instructions for use How to run the software
 python SSGCN.py
- 
 
 
+# Reproduction instructions
+The results of benchmark can be reproduced.
 
