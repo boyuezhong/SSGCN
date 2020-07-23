@@ -9,8 +9,8 @@ The SSGCN model was implemented in the TensorFlow37 framework (version TensorFlo
 ## Hardware Requirements
 The SSGCN requires a computer with a  GPU.
 # Installation Guide:
-git clone https://github.com/boyuezhong/SSGCN.git
-cd SSGCN
+git clone https://github.com/boyuezhong/SSGCN.git.
+cd SSGCN.
 This package does not need to be installed, it can be used directly.
 
 
