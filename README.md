@@ -19,7 +19,9 @@ cd SSGCN
 
 python SSGCN.py
 ## Expected Output
-
+## Expected run time 
+ Inferring the target of a compound took 20 second on a NVIDIA TITAN RTX GPU .
+ 
 
 
 
