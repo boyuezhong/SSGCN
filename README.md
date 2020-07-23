@@ -14,7 +14,10 @@ git clone https://github.com/boyuezhong/SSGCN.git.
 cd SSGCN.
 
 This package does not need to be installed, it can be used directly.
+# Demo
+cd SSGCN
 
+python SSGCN.py
 
 
 
