@@ -31,4 +31,6 @@ python SSGCN.py
 
 # Reproduction instructions
 The results of benchmark can be reproduced.
+# License
+This code  is  licensed  under the Apache 2.0 License.
 
