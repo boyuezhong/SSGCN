@@ -5,7 +5,7 @@ SSGCN
 ## Operating Systems  Requirements
 This package is supported for  Linux. The package has been tested on Linux: Ubuntu 16.04
 ## Software Dependencies
-The SSGCN model was implemented in the TensorFlow37 framework (version TensorFlow-GPU 1.14.0) in Python 3.7.
+The SSGCN model was implemented in the TensorFlow framework (version TensorFlow-GPU 1.14.0) in Python 3.7.
 ## Hardware Requirements
 The SSGCN requires a computer with a  GPU.
 # Installation Guide:
